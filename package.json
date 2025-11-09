@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp-image-host",
+  "version": "1.0.0",
+  "description": "A simple static file server for WhatsApp API assets.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+### 3. Deploy to Zeabur
+
+1.  **Commit and Push:** Initialize a Git repository, commit all three items (`server.js`, `package.json`, and the `/public` folder containing your images), and push them to a **new repository on GitHub**.
+2.  **Connect Zeabur:** Follow the steps we outlined earlier:
+    * Go to your Zeabur project.
+    * Click **"Add Service"** > **"Deploy with Git"**.
+    * Select the GitHub repository you just created.
+3.  **Automatic Detection:** Zeabur will detect the `package.json` file, install `express`, run the `npm start` script (which runs `node server.js`), and deploy the service.
+4.  **Final URL:** Once deployed, Zeabur assigns a public domain (e.g., `my-images.zeabur.app`). If you put `invite.png` in the `/public` folder, the link you use in your WhatsApp API calls will be:
+
+    `https://my-images.zeabur.app/invite.png`
+
+Do you have your images ready to go, or would you like to build a quick **React app** that consumes these image URLs once the server is deployed?
